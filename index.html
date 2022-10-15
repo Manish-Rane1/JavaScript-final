@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="icon">
+            <img src="weather.png" alt="weather-icon" id="logo">
+        </div>
+        <div id="info">
+            <button id="info-button" onclick="guide()" >
+                <!-- <img src="info.png" alt="info" id="info-icon"> -->
+                Info
+            </button>
+        </div>
+        <div class="nested">
+            <div id="input">
+                <input type="text" id="input-box" onkeypress="func()" placeholder="City Name"/>
+            </div>
+            <div id="submit"></div>
+            <div id="display">  
+                <p id="city" class="text">
+                    <!-- Delhi, India -->
+                </p>
+                <p id="date" class="text">
+                    <!-- Saturday, 15 October 2022 -->
+                </p>
+                <p id="weather">
+                    <img src="" alt="" id="weather-icon"> <span id="description" class="text">  </span>
+                </p>
+                <p id="temp" class="text">
+                    <!-- 24 <sup>o</sup> C -->
+                </p>
+            </div>
+        </div>
+        <div id="note">
+            <!-- notes -->
+        </div>
+      </div>
+</body>
+</html>

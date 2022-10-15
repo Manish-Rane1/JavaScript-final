@@ -1,0 +1,191 @@
+body{
+  background-image: url("gradient.jpg");
+  background-size: cover;
+}
+
+div{
+  text-align: center;
+  /* justify-content: center; */
+  color: black;
+  /* border: solid 2px red; */
+}
+
+p{
+  text-align: center;
+  color: black;
+  border: 0;
+  /* border: 1px solid red; */
+  margin-right: 30%;
+  margin-left: 30%;
+  height: 7%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+span{
+  /* border: 1px solid red; */
+  margin-left: 20%;
+  margin-bottom: 20%;
+  /* padding-bottom: 20%; */
+  /* padding-left: 12%; */
+}
+
+#logo{
+  height: 100%;
+  width: 20%;
+  margin-left: 20%;
+}
+
+#info-icon{
+  height: 70%;
+  width: 70%;
+  /* margin-left: 60%; */
+  margin-top: 1%;
+}
+
+#info-button{
+  height: 70%;
+  width: 6%;
+  margin-left: 60%;
+  margin-top: 1%;
+  background-image: url("info.png");
+  background-color: transparent;
+  border: 0;
+  color: black;
+  font-size: 30px;
+}
+
+#weather{
+  height: 40%;
+}
+
+#temp{
+  height: 25%;
+}
+
+.wrapper{
+  height: 98vh;
+  width: 99vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px auto 65px;
+  grid-template-areas: 
+  "i i t t t t"
+  "c c c c c c"
+  "n n n n n n"
+  ;
+}
+
+#input-box{
+  /* margin-top: 5%; */
+  border: 0;
+  border-radius: 50px;
+  height: 85%;
+  width: 80%;
+  margin-left: 30%;
+  padding-left: 30px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#icon{
+  /* background-color: yellow; */
+  /* grid-column: 1;
+  grid-row: 1; */
+  background-color: transparent;
+  grid-area: i;
+}
+
+#info{
+  /* background-color: yellowgreen; */
+  /* grid-column: 2;
+  grid-row: 1; */
+  background-color: transparent;
+  grid-area: t;
+}
+
+.nested{
+  /* background-color: royalblue; */
+  background-color: transparent;
+  grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr);
+  grid-template-rows: 70px 70px auto;
+  grid-template-areas: 
+  "g g g g z z"
+  "g g g g z z"
+  "d d d d d d"
+  ;
+}
+
+#input{
+  /* text-align: center; */
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 5%;
+  grid-area: g;
+}
+
+#submit{
+  /* margin-top: 20%;
+  margin-right: 30%; */
+  grid-area: z;
+}
+
+#city{
+  font-size: larger;
+}
+
+#date{
+  font-size: larger;
+}
+
+#display{
+  margin: 5%;
+  margin-top: 1%;
+  margin-bottom: 0;
+  grid-area: d;
+  font-size: 20px;
+  background: transparent;
+}
+
+#weather-icon{
+  /* border: red solid 1px; */
+  border: 0;
+  padding-top: 5%;
+  height:90px;
+  width:90px;
+  margin-left: 10%;
+  /* padding-left: 5%; */
+}
+
+#description{
+  margin:10%;
+  margin-bottom: 100%;
+  font-size:40px;
+}
+
+#temp{
+  margin-top: 5px;
+  font-size: 50px;
+}
+
+#note{
+  /* background-color: tan; */
+  background-color: transparent;
+  /* grid-column: 1/2;
+  grid-row: 3; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  grid-area: n;
+  font-size: 20px;
+}
+
+::placeholder{
+  text-align: center;
+  color: sandybrown;
+  font-size: large;
+  /* padding-left: 30px; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
