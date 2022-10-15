@@ -1,5 +1,4 @@
 alert("Click on the Info buttom on webpage for complete guide of this website");
-// givedate()
 function givedate(){
 const d= new Date();
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -75,13 +74,10 @@ function weatherInfo(key){
     givedate();
     axios.get('http://api.weatherapi.com/v1/current.json?key=bf8e2aaac0b94d11aa794209221510&q='+key+'&aqi=no')
     .then (response =>{
-    //   console.log(response.data.location.name+", "+response.data.location.country);
       let cityName = response.data.location.name+", "+response.data.location.country;
       document.getElementById('city').innerText = cityName;
 
-    //   console.log(response.data.current.condition.text);
       document.getElementById('description').innerText = response.data.current.condition.text;
-    //   console.log(response.data.current.temp_c);
       document.getElementById('temp').innerHTML = response.data.current.temp_c+"<sup>o</sup> C";
 
       let id = response.data.current.condition.code;
@@ -96,8 +92,6 @@ function weatherInfo(key){
     .then (response =>{
         (response.data.map((val)=>{
             if (state==true){
-                // console.clear();
-                // console.log(val.name+", "+val.region+", "+val.country);
                 weatherInfo(val.name+","+val.country);
                 state=false;
             }
@@ -105,11 +99,6 @@ function weatherInfo(key){
     })
     .catch( error => console.error(error) );
     }
-
-// console.log(days[d.getDay()]);
-// console.log(d.getDate());
-// console.log(months[d.getMonth()]);
-// console.log(d.getFullYear());
 
 function guide(){
     alert("This is a dynamic weather app \n \n In this app the background of the webpage changes with the weather conditions of the given city.\n \n Also the weather icons do the same.\n \n There is even a custom note at bottom of page for each type of weather.\n  \n Tip: Go to \n https://www.weather-forecast.com/countries/India-1 \n and try cities with different weathers to see all the dynamic functions.")
