@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Guide</title>
+</head>
+
+<style>
+    #instruction{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: palegreen;
+        padding: 30px;
+    }
+
+    #wrap{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 600px);
+        grid-template-rows: 380px 380px 380px;
+        grid-gap: 20px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    p{
+        background: cover;
+        min-width: 60px;
+    }
+</style>
+
+<body>
+    <div id="instruction">
+        <h1> Weather App Guide</h1>
+        <h2>
+            This is a dynamic webpage.
+        </h2>
+        <ul>
+            <li>
+                The background of the webpage changes according to weather of the given city. <br>
+                It has following background presets, <br> <br>
+                <ol>
+                    <li>
+                       <b> Clouds </b> : For clear or partly cloudy weather. <br> <br>
+                    </li>
+                    <li>
+                        <b> Haze </b> : For foggy weather. <br> <br>
+                    </li>
+                    <li>
+                        <b> Rainy </b> : For moderate to heavy rain. <br> <br>
+                    </li>
+                    <li>
+                        <b> Thunder </b> : For storms. <br> <br>
+                    </li>
+                    <li>
+                        <b> Snow </b> : For regions with snowfall. <br> <br>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                The icons near the weather data also change dynamically. <br> <br>
+            </li>
+            <li>
+                Also there is even a unique note written at the end of the page according to the type of weather <br> <br>
+            </li>
+            <li>
+                Below are demo videos of all the possible backgrounds and features of the webpage. <br>
+                ( The demo videos are for representation of dynamic background and icons only, and may not match the weather of city at that time, but on the weather app it will always match the current weather.)
+            </li>
+        </ul>
+    </div>
+    <div id="wrap">
+        <p style="background-image:url(thunder-demo.gif) ;">
+        
+        </p>
+        <p style="background-image:url(haze-demo.gif) ;">
+            
+        </p>
+        <p style="background-image:url(rain-demo.gif) ;">
+            
+        </p >
+        <p style="background-image:url(snow-demo.gif) ;">
+            
+        </p>
+        <p style="background-image:url(cloud-demo.gif) ;">
+            
+        </p>
+
+    </div>
+</body>
+</html>

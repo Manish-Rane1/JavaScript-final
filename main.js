@@ -1,4 +1,4 @@
-alert("Click on the Info buttom on webpage for complete guide of this website");
+alert("Click on the Info button on webpage for complete guide of this website.");
 function givedate(){
 const d= new Date();
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -67,9 +67,10 @@ function background(id){
         document.getElementById('display').style.background = "transparent"
         document.getElementById('note').style.background = "transparent"
         document.getElementById('note').innerHTML="Thunderstorm is brewing better stay inside !!"
+
     } else if(id>=701 && 781>=id){
         let haze = document.getElementById("weather-icon");
-        haze.src="snow.png"
+        haze.src="Haze.png"
         document.body.style.backgroundImage = "url('Haze.gif')";
         document.getElementById('city').style.color = "#000000";
         document.getElementById('date').style.color = "#000000";
@@ -77,10 +78,11 @@ function background(id){
         document.getElementById('description').style.color = "#000000";
         document.getElementById('temp').style.color = "#000000";
         document.getElementById('note').style.color = "#000000";
-        document.getElementById('info-button').style.color = "#000000";
+        document.getElementById('info-button').style.color = "#FFFFFF";
         document.getElementById('display').style.background = "rgba(255,255,255, 0.5)"
         document.getElementById('note').style.background = "rgba(255,255,255, 0.5)"
         document.getElementById('note').innerHTML="Its pretty foggy out there, Drive safe !!"
+
     }
 }
 
@@ -103,20 +105,17 @@ function weatherInfo(key){
   }
 
   function func(){
-    // let state=true;
+
     let key = document.getElementById('input-box').value
     axios.get('http://api.openweathermap.org/geo/1.0/direct?q='+key+'&limit=1&appid=ceddbeb05632f89ad9c335ae2abe113b')
     .then (response =>{
         (response.data.map((val)=>{
-            // if (state==true){
+
                 weatherInfo(val.name+","+val.country);
-                // state=false;
-            // }
+
         }))
     })
     .catch( error => document.getElementById('city').innerText = 'City Not Found' );
     }
 
-function guide(){
-    alert("This is a dynamic weather app \n \n In this app the background of the webpage changes with the weather conditions of the given city.\n \n Also the weather icons do the same.\n \n There is even a custom note at bottom of page for each type of weather.\n  \n Tip: Go to \n https://www.weather-forecast.com/countries/India-1 \n and try cities with different weathers to see all the dynamic functions.")
-}
+
