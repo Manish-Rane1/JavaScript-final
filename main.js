@@ -107,7 +107,7 @@ function weatherInfo(key){
   function func(){
 
     let key = document.getElementById('input-box').value
-    axios.get('http://api.openweathermap.org/geo/1.0/direct?q='+key+'&limit=1&appid=ceddbeb05632f89ad9c335ae2abe113b')
+    axios.get('https://api.openweathermap.org/geo/1.0/direct?q='+key+'&limit=1&appid=ceddbeb05632f89ad9c335ae2abe113b')
     .then (response =>{
         (response.data.map((val)=>{
 
